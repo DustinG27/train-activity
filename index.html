@@ -3,12 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--moment.js-->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    ​
     <!-- Bootstrap CDN-->
     <link
       rel="stylesheet"
@@ -16,9 +11,7 @@
     />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     ​
-    <!-- Firebase References -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  
 
     <link rel="stylesheet" type="text/css" href="assets/css/syle.css" />
     <title>Train Schedule</title>
@@ -41,7 +34,7 @@
               <strong>Current Train Schedule</strong>
             </div>
             <div class="card-body">
-              <table class="table table-striped">
+              <table class="table table-striped" id="trainTable">
                 <thead>
                   <tr>
                     <th scope="col">Train Name</th>
@@ -68,22 +61,42 @@
               <form role="form">
                 <div class="form-group">
                   <label>Train Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Train Name"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Train Name"
+                  />
                 </div>
                 <div class="form-group">
                   <label>Destination</label>
-                  <input type="text" class="form-control" id="destination" placeholder="Destination"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="destination"
+                    placeholder="Destination"
+                  />
                 </div>
                 <div class="form-group">
                   <label>First Train Time (military time)</label>
-                  <input type="text" class="form-control" id="trainTime" placeholder="HH:mm"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="trainTime"
+                    placeholder="HH:mm"
+                  />
                 </div>
                 <div class="form-group">
                   <label>Frequency (min)</label>
-                  <input type="text" class="form-control" id="frequency" placeholder="mm"/>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="frequency"
+                    placeholder="mm"
+                  />
                 </div>
                 <button type="submit" class="btn btn-primary" id="run-search">
-                  Summit
+                  Sumbit
                 </button>
               </form>
             </div>
@@ -91,6 +104,17 @@
         </div>
       </div>
     </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+      <!-- Firebase References -->
+      <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    ​<!--javascript-->
+    <script src="assets/js/javascript.js"></script>
   </body>
-  <script src="assets/js/javascript.js"></script>
 </html>
